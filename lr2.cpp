@@ -16,10 +16,23 @@ int main()
 
     printf("ishodnaya matrica:\n"); // вывод исходной матрицы
 
-    for (c = 0; c < order; c++) {
+    for (c = 0; c < order; c++) { 
         for (d = 0; d < order; d++)
             printf("%d\t", matrix[c][d]);
         printf("\n");
     }
+
+    for (c = 0; c < order; c++) // генерация транспонированной матрицы
+        for (d = 0; d < order; d++)
+            transpose[d][c] = matrix[c][d];
+
+    printf("transponirovanaya matrica:\n");
+
+    for (c = 0; c < order; c++) { // вывод новой матрицы
+        for (d = 0; d < order; d++)
+            printf("%d\t", transpose[c][d]);
+        printf("\n");
+    }
+
     return 0;
 }
